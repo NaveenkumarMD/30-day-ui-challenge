@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .digit {
+        width: 100px;
+        height: 250px;
+      }
+      .segment {
+        width: 100px;
+        height: 20px;
+        /* border-radius: 60px; */
+        /* background-color: black; */
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+      .row > .segment {
+        /* background-color: black; */
+        height: 100px;
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body style="display: flex; gap: 30px">
+    <div class="digit" style="display: none">
+      <div class="segment" id="segment-1"></div>
+      <div class="row">
+        <div class="segment 2" id="segment-2"></div>
+        <div class="segment 3" id="segment-3"></div>
+      </div>
+      <div class="segment 4" id="segment-4"></div>
+      <div class="row">
+        <div class="segment 5" id="segment-5"></div>
+        <div class="segment 6" id="segment-6"></div>
+      </div>
+      <div class="segment 7" id="segment-7"></div>
+    </div>
+  </body>
+  <script src="./index.js" defer></script>
+</html>
