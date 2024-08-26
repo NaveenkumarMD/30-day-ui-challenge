@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    #container{
+      background-color: gainsboro;
+      width: 500px;
+      height: 50px;
+      border-radius: 20px;
+      position: relative;
+    }
+    #bar{
+      position: absolute;
+      background-color:darkgreen;
+      height: inherit;
+      border-radius: 20px 0px 0px 20px;
+      left:0;
+      top:0;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="bar">
+
+    </div>
+  </div>
+</body>
+
+
+<script >
+  const bar=document.getElementById("bar");
+  let percent=0;
+  const width=500* percent/100;
+  bar.style.width=`${width}px`;
+
+
+
+</script>
+</html>
