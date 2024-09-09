@@ -1,0 +1,113 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    height: 100vh;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.number-item{
+    font-size: 20px;
+    font-family: "Roboto Light", serif;
+    position: absolute;
+}
+.one{
+    right: 130px;
+    top: 50px;
+}
+.two{
+    right: 65px;
+    top: 130px;
+}
+.three{
+    right:50px;
+    top: 250px;
+}
+.nine{
+    left:50px;
+    top: 250px;
+}
+.ten{
+    left: 65px;
+    top: 130px;
+}
+.eleven{
+    left: 130px;
+    top: 50px;
+}
+.twelve{
+    left:250px;
+    top:20px
+}
+.four{
+    right: 65px;
+    bottom: 130px;
+}
+.five{
+    right: 130px;
+    bottom: 50px;
+}
+.six{
+    left:250px;
+    bottom:20px
+}
+.seven{
+    left: 130px;
+    bottom: 50px;
+}
+.eight{
+    left: 65px;
+    bottom: 130px;
+}
+.center{
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    border-radius: 50%;
+    position: relative;
+}
+.hour{
+    position: absolute;
+    width: 20px;
+    height: 300px;
+    border-radius: 30px 30px 30px 30px;
+    transform:translateY(-50%);
+}
+.minute{
+    position: absolute;
+    width: 16px;
+    height: 320px;
+    border-radius: 30px 30px 30px 30px;
+    transform:translateY(-50%);
+}
+.second{
+    position: absolute;
+    width: 10px;
+    height: 400px;
+    /*background-color: white;*/
+    border-radius: 30px 30px 30px 30px;
+    transform:translateY(-50%);
+}
+.half{
+    height: 50%;
+    width: 100%;
+}
+.second>.half{
+    background-color:red;
+}
+.minute>.half{
+    background-color:orange;
+}
+.hour>.half{
+    background-color:green;
+}
+

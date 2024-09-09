@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .hidden {
+      visibility: hidden;
+    }
+    .visible {
+      visibility: visible;
+      animation: show 3s;
+    }
+    @keyframes show {
+      0% {
+        background-color: red;
+      }
+      50% {
+        background-color: #265326;
+      }
+      100% {
+        background-color: burlywood;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="accordion">
+  <div class="visible-component" role="button" id="button">Click to view the hidden content</div>
+  <div class="hidden-component hidden">
+    This is the hidden text
+  </div>
+</div>
+</body>
+<script>
+  const btn = document.getElementById("button");
+  btn.addEventListener("click", () => {
+    const hiddenComponent = document.querySelectorAll(".hidden-component")[0];
+    hiddenComponent.classList.toggle("hidden");
+    hiddenComponent.classList.toggle("visible");
+  });
+</script>
+</html>
