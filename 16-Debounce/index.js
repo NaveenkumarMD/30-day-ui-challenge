@@ -14,8 +14,4 @@ const method = () => {
 
 const debounced = debouncedMethod(method);
 
-let i = 2;
-while (i > 1) {
-  debounced();
-  i++;
-}
+
