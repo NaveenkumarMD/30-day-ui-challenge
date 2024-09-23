@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .container{
+      background-color: darkred;
+      width: 500px;
+      height: 50px;
+      border-radius: 20px;
+      position: relative;
+    }
+    .bar{
+      position: absolute;
+      background-color:darkgreen;
+      height: inherit;
+      border-radius: 20px 0px 0px 20px;
+      left:0;
+      top:0;
+    }
+  </style>
+</head>
+<body>
+<div id="loader1">
+  <div class="container">
+    <div class="bar">
+
+    </div>
+  </div>
+</div>
+<div id="loader2">
+  <div class="container">
+    <div class="bar">
+
+    </div>
+  </div>
+</div>
+</body>
+
+
+<script defer async>
+  async function fillLoader(loaderDOMElement){
+    return new Promise((res,rej)=>{
+      const container=loaderDOMElement.querySelector(".container");
+      const bar=container.querySelector(".bar")
+      let width=0;
+      const interval=setInterval(()=>{
+        if(width===500){
+          clearInterval(interval)
+          res()
+        }
+        bar.style.width=`${width}px`;
+        width+=20;
+      },100)
+    })
+  }
+  async function  main(){
+    await fillLoader(document.querySelector("#loader1"))
+    await fillLoader(document.querySelector("#loader2"))
+
+  }
+  main()
+
+</script>
+</html>
