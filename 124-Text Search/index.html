@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .selected{
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+<input type="text" >
+  <div class="text">
+    JavaScript is Foo one of the most
+    widely-used programming languages in the world, primarily known for its role in web development, where it serves as the backbone of client-side interactivity and dynamic web content. Initially developed by Brendan Eich in 1995, JavaScript started as a simple scripting language to add small features to web pages but has evolved into a powerful, versatile, and essential tool in modern software development. It is a high-level, dynamically-typed, and interpreted language, which means that code written in JavaScript can be executed directly by the browser's engine without the need for compilation. Over the years, JavaScript has expanded far beyond the client side, thanks to environments like Node.js, which allows developers to run JavaScript on the server, creating full-stack applications entirely in one language. Its ecosystem is vast, with a wide variety of libraries and frameworks like React, Angular, and Vue.js, each serving different needs in front-end development, while backend solutions like Express.js help streamline server-side logic. One of the key strengths of JavaScript is its asynchronous capabilities, with features like Promises, async/await, and callbacks, which allow developers to handle complex tasks such as API calls, file I/O, and database queries without blocking the main execution thread. JavaScript's event-driven architecture and non-blocking I/O model also make it an excellent choice for building real-time applications like chat systems or online gaming platforms. Another critical aspect of JavaScript is its compatibility with other web technologies like HTML and CSS, forming the trifecta of web development. With each new update, JavaScript grows more powerful and flexible, offering new syntactical sugar, like arrow functions and template literals, and providing better performance optimizations. Tools like Babel and Webpack have further transformed the way JavaScript is written and deployed, making it easier to write cutting-edge JavaScript while ensuring backward compatibility with older browsers. In addition, TypeScript, a statically-typed superset of JavaScript, has gained popularity for its ability to catch errors at compile time, leading to more reliable and maintainable codebases. Despite its many strengths, JavaScript can be quirky, with certain behaviors like type coercion and floating-point inaccuracies sometimes baffling developers. However, its active community, rich ecosystem, and continuous updates make JavaScript indispensable for anyone involved in web development today. As the language continues to evolve, it remains at the forefront of technological innovations in areas such as artificial intelligence, machine learning, and the Internet of Things (IoT), solidifying its position as a universal language for the modern age.
+  </div>
+</body>
+<script defer>
+    const textContainer=document.querySelector(".text");
+    const text=textContainer.textContent.toString();
+    const inputElement=document.querySelector("input")
+    inputElement.addEventListener("input",()=>{
+      const value=inputElement.value
+      const formettedText=text.replaceAll(value,`<span class="selected">${value}</span>`)
+      console.log(formettedText)
+      textContainer.innerHTML=formettedText
+    })
+
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .star-container{
+      display: grid;
+      row-gap: 10px;
+      grid-template-columns: 20px 20px 20px 20px 20px;
+      grid-gap:10px
+    }
+    .star{
+      border-radius: 20px;
+      width: 20px;
+      height: 20px;
+      background-color: grey;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="star-container">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+</body>
+<script defer>
+  const container=document.querySelector(".star-container");
+  const stars=container.querySelectorAll(".star");
+    function fillCount(count){
+      console.log("Called",count)
+      for(let i=0;i<=5;i++){
+        const starContent=document.getElementById(i.toString());
+        if(i<=count){
+          starContent.style.backgroundColor="green"
+        }else{
+          starContent.style.backgroundColor="grey"
+        }
+
+      }
+
+    }
+
+    stars.forEach((star,idx)=>{
+      star.setAttribute("id",idx)
+      star.addEventListener("click",(id)=>{
+          fillCount(idx)
+      })
+    })
+</script>
+</html>

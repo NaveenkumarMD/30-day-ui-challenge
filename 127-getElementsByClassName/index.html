@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="container"></div>
+</body>
+<script>
+  function findbyClassName(classList){
+    if(!Array.isArray(classList) || classList.length===0){
+      return [];
+    }
+    const selector = classList.map(cls => `.${cls}`).join('');
+    return Array.from(document.querySelectorAll(selector))
+
+  }
+  findbyClassName(["container"])
+</script>
+</html>
+
